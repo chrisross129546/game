@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap" rel="stylesheet" />
+
+    <title>Game Client</title>
+    <link rel="stylesheet" href="./main.css" />
+
+    <script type="module" src="dist/index.js"></script>
+</head>
+<body>
+<canvas id="game-canvas" oncontextmenu="return false;"></canvas>
+<div id="game-interface" style="display: none;">
+    <div class="chat-holder" style="display: none;" id="chat-holder">
+        <input id="chat" maxlength="32" autocomplete="off" placeholder="Enter Chat" type="text" />
+    </div>
+</div>
+<div class="filter" id="menu">
+    <div class="main-content">
+        <div class="customise">
+            <h1 class="customise-title">Choose Skin</h1>
+            <div class="skins">
+                <div class="skin" id="red">0</div>
+                <div class="skin" id="blue">1</div>
+                <div class="skin" id="green">2</div>
+                <div class="skin" id="white">3</div>
+                <div class="skin selected" id="brown">4</div>
+            </div>
+        </div>
+        <div class="enter-game">
+            <input class="customise-title" placeholder="Enter Name" maxlength="16" id="name-input" />
+            <button id="play-button"><span id="play-button-text" class="customise-title">Play</span></button>
+        </div>
+    </div>
+
+    <div class="socials">
+        <a>
+            <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" />
+        </a>
+        <a>
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384067.png" />
+        </a>
+        <a>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png" />
+        </a>
+    </div>
+
+    <div class="socials">
+        <a>
+            <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" />
+        </a>
+        <a>
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384067.png" />
+        </a>
+        <a>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/512px-Logo_of_Twitter.svg.png" />
+        </a>
+    </div>
+</div>
+</body>
+</html>

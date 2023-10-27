@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+}
+
+* {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+}
+
+.filter {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    position: absolute;
+}
+
+.main-content {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 15vw;
+    /* background-color: rgba(0, 0, 0, 0.15); */
+    border-radius: 15px;
+    align-items: center;
+    display: flex;
+    padding: 1rem;
+}
+
+.enter-game,
+.customise {
+    width: 45%;
+    height: 70%;
+    background: rgb(255 255 255 / 0.9);
+    /* border: 3px solid #afafaf; */
+    border-radius: 15px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.enter-game > input {
+    margin: auto;
+    width: 70%;
+    padding: 2%;
+    font-size: 25px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.15);
+    border: none;
+}
+
+.enter-game > ::placeholder {
+    margin: 5%;
+    font-size: 25px;
+    color: #403f3f;
+    text-align: center;
+}
+
+.enter-game > button {
+    height: 20%;
+    margin: auto;
+    width: 70%;
+    padding: 2%;
+    background: #7ee559;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    font-size: 25px;
+    color: #fff;
+}
+
+.server-select > select {
+    width: 90%;
+    height: 12%;
+    margin: auto;
+    transform: translateY(-4vw);
+    text-align: center;
+    font-size: 15px;
+    border-radius: 15px;
+}
+
+.skin {
+    /* background: rgb(255, 161, 161); */
+    border: 0.2vw solid #403f3f;
+    border-radius: 100px;
+    height: 1.4vw;
+    width: 1.4vw;
+    cursor: pointer;
+    display: flex;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skins {
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* .customise {
+  width: 45%;
+  height: 80%;
+
+  border-radius: 15px;
+  margin: auto;
+  flex-wrap: wrap;
+  align-content: center;
+} */
+
+.customise-title {
+    font-size: 25px;
+    color: #403f3f;
+    text-align: center;
+    width: 70%;
+    height: 20%;
+    /* margin: 5%; */
+    font-size: 25px;
+    color: #403f3f;
+    text-align: center;
+    width: 100%;
+}
+
+#game-canvas {
+    position: absolute;
+}
+
+/* #red {
+    background: #ff6961;
+}
+
+#blue {
+    background: #a7c7e7;
+}
+
+#green {
+    background: #77dd77;
+}
+
+#brown {
+    background: #836953;
+}
+
+#white {
+    background: #faf8f6;
+} */
+
+.customise-title > p {
+    font-size: 25px;
+    margin-right: 2vw;
+    color: grey;
+}
+
+/* a {
+  display: none;
+} */
+
+img {
+    width: 50px;
+    /* transform: translateY(20%); */
+    margin: 10px;
+    display: flex;
+}
+
+.socials {
+    border-radius: 15px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background: rgb(255 255 255 / 0.9);
+    text-align: right;
+    font-size: 20px;
+    padding: 8px;
+    align-items: center;
+}
+
+#chat {
+    padding: 8px;
+    font-size: 25px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    border: 0;
+    display: block;
+}
+
+#chat:active {
+    border: none;
+    box-shadow: none;
+    padding: 8px;
+    font-size: 25px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    border: 0;
+    display: block;
+    position: absolute;
+}
+
+.selected {
+    border-radius: 10px;
+}
+
+#game-interface {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.chat-holder {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 70%;
+}
+
+#play-button-text {
+    font-size: 25px;
+    color: #403f3f;
+    text-align: center;
+}
