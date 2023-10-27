@@ -1,0 +1,80 @@
+all numbers in big endian
+... = keep doing line until finished reading
+
+text()
+	u16(length) TextDecoder/Encoder
+
+angle()
+	i8( Math.round((2 * Angle / Math.PI) * 255) )
+
+ServerBound
+	Ping
+		u8(0)
+	Spawn
+		u8(1) text(name)
+	Move
+		u8(2) 
+			u8(BIT_FLAGS):
+				1: angle(face_dir)
+			 	2: angle(move_dir)
+				4: not moving
+
+ClientBound
+	Pong
+		u8(0) u8(player_count)
+	RemoveEntities
+		u8(1)
+			u16(entity_id)...
+	Init - sent after connected
+		u8(2) u8(player_count) u16(map_size) u8(player_id) u16(entity_id) float64(server_start_time)
+	Spawn
+		u8(3) f32(x) f32(y) u16(wood) u16(stone) u16(food) u16(gold)
+	MeetEntities
+		u8(4)
+			u16(entity_id) u8(entity_type) u8(size) f32(max_hp) text(name)...
+	Update
+		u8(5)
+			u16(entity_id) f32(x) f32(y) angle(face_dir) f32(hp)...
+
+---------------------------------------
+
+ServerBound
+	Spawn
+		u8(1) text(name) u8(skin_color)
+	Input
+		u8(2) 
+			u8(BIT_FLAGS):
+				1: angle(face_dir)
+			 	2: angle(move_dir)
+				4: not moving
+				8: right_mouse_status (1 = down 0 = up)
+				16: left_mouse_status (1 = down 0 = up)
+	Chat
+		u8(3) text(message)
+	Equip
+		u8(4)
+			u8(BIT_FLAGS)
+				1: u8(held_item_id)
+				2: u8(hat_id)
+				4: u8(accessory/tail_id)
+
+
+ClientBound
+	Chat
+		u8(6) u16(entity_id) text(player_name) text(message)
+	
+
+
+
+if entity type = player
+Update:
+	u16(entity_id) f32(x) f32(y) angle(face_dir) f32(hp) <u8(held_item_id) u8(hat_id) u8(tail_id)>
+Meet:
+	u16(entity_id) u8(entity_type) u8(size) <u8(skin_color)> f32(max_hp) text(name)
+
+
+-----------------
+
+ClientBound
+	UpdateResources
+		u8(7) u16(wood) u16(stone) u16(food) u16(gold)
